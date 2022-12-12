@@ -18,7 +18,7 @@ public class Main {
             System
             if(question.checkAnswer()){
                 player.addPoints();
-                System.out.println("Correct! You got 1 point! In total you have " +player.points + " points!");
+                System.out.println("Correct! You got 1 point! In total you have " +player.points + " wonderful points!");
             }else {
                 player.deductLive();
                 System.out.println("Wrong! You lost 1 life! You have got left " + player.lives + " lives!");
