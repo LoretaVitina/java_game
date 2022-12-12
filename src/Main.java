@@ -1,0 +1,29 @@
+import javax.swing.*;
+import java.io.File;
+import java.util.*;
+
+public class Main {
+    static Scanner inputReader = new Scanner(System.in);
+    static String initialMessage = "Hello! This is a game, where you have to pick correct capital of a country. At the start of the game you have 10 lives. " +
+            "For every correct answer you get 1 point, but if you guess wrong then 1 live will be deducted!" +
+            "If you want to continue, enter your username (at least 5 characters loong) and press [ENTER]";
+    public static void main(String[] args) {
+        Country.readInFromFile();
+        System.out.println(initialMessage);
+        Player player = new Player();
+        System.out.println("Hi, " + player.name + "! Let's get started!" );
+        while (player.isAlive()) {
+            Question question = new Question();
+            question.displayOptions();
+            System
+            if(question.checkAnswer()){
+                player.addPoints();
+                System.out.println("Correct! You got 1 point! In total you have " +player.points + " points!");
+            }else {
+                player.deductLive();
+                System.out.println("Wrong! You lost 1 life! You have got left " + player.lives + " lives!");
+            }
+        }
+        inputReader.close();
+    }
+}
