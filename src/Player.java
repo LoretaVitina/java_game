@@ -5,16 +5,16 @@ public class Player {
     String name;
     int lives;
     int points;
-    int time;
-    static ArrayList<Player> all = new ArrayList<Player>();
+    Stopwatch stopwatch;
+    static ArrayList<Player> game = new ArrayList<Player>();
     static ArrayList<Player> top = new ArrayList<>();
 
-    Player(){
+    Player(Stopwatch stopwatch){
+        this.stopwatch = stopwatch;
         setName();
         this.lives = 10;
         this.points = 0;
-        this.time = 0;
-        all.add(this);
+        game.add(this);
     }
 
     void setName(){
@@ -46,30 +46,7 @@ public class Player {
     void addPoints(){
         this.points++;
     }
-
     public String toString(){
         return this.name + " " + isAlive() + " = " + this.lives;
     }
 }
-/*
-    void setName(){
-        Main.inputReader = new Scanner(System.in);
-        boolean isValidName = false;
-        int nameLengthLimit = 5;
-        String inputName = "";
-        while (!isValidName) {
-            inputName = Main.inputReader.nextLine().trim().toLowerCase();
-            System.out.println("Input name " + inputName);
-            inputName = inputName.substring(0,1).toUpperCase() + inputName.substring(1);
-            System.out.println("Input name2 " + inputName);
-            if (inputName.length() > nameLengthLimit) {
-                System.out.println("Input name3 " + inputName);
-                isValidName = true;
-                System.out.println("Input name4 " + inputName);
-                break;
-            }
-            System.out.println(inputName + " not a good username! It's too short! Please enter your name again and press [ENTER]");
-        }
-        name = inputName;
-    }
- */

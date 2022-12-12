@@ -1,5 +1,3 @@
-import javax.swing.*;
-import java.io.File;
 import java.util.*;
 
 public class Main {
@@ -10,20 +8,44 @@ public class Main {
     public static void main(String[] args) {
         Country.readInFromFile();
         System.out.println(initialMessage);
-        Player player = new Player();
-        System.out.println("Hi, " + player.name + "! Let's get started!" );
+        Stopwatch stopwatch = new Stopwatch();
+        Player player = new Player(stopwatch);
+        System.out.println("Hi, " + player.name + "! Let's get started!" + "\n");
+        stopwatch.setStartTime();
         while (player.isAlive()) {
             Question question = new Question();
             question.displayOptions();
-            System
             if(question.checkAnswer()){
                 player.addPoints();
-                System.out.println("Correct! You got 1 point! In total you have " +player.points + " wonderful points!");
+                System.out.print("Correct! You got 1 point! In total you have ");
+                printPoints(player.points);
+                System.out.println();
             }else {
                 player.deductLive();
-                System.out.println("Wrong! You lost 1 life! You have got left " + player.lives + " lives!");
+                System.out.print("Wrong! The correct answer is " + question.correctAnswer.capital + "! You lost 1 life! You have got left " );
+                printLives(player.lives);
+                System.out.println();
             }
         }
+        stopwatch.setEndTime();
+        System.out.print("Game is over! You got ");
+        printPoints(player.points);
+        System.out.print("You answered correctly to " + player.points + " questions in ");
+        stopwatch.displayTimeSpentPlaying();
         inputReader.close();
+    }
+
+    static void printPoints(int number){
+        if(number == 1) {
+            System.out.println(number + " point!");
+        }else
+            System.out.println(number + " points!");
+    }
+
+    static void printLives(int number) {
+        if (number == 1) {
+            System.out.println(number + " life!");
+        } else
+            System.out.println(number + " lives!");
     }
 }

@@ -53,22 +53,3 @@ public class Country {
         return number;
     }
 }
-/*
-static void readInFromFile(){
-        try {
-            Scanner fileReader = new Scanner(csvFile, encoding);
-            fileReader.nextLine();
-            while (fileReader.hasNextLine()) {
-                String line = fileReader.nextLine();
-                String[] parts = line.split(delimiter);
-                if (parts[1].trim().equals(unusableData) || parts[5].trim().equals(unusableContinent)) continue;
-                String name = parts[0].trim();
-                String capital = parts[1].trim();
-                Country country = new Country(name, capital);
-            }
-            fileReader.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
- */
