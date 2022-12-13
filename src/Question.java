@@ -46,6 +46,10 @@ public class Question {
     boolean checkAnswer(){
         Main.inputReader = new Scanner(System.in);
         String answer = Main.inputReader.nextLine().trim().toUpperCase();
+        if(answer.isEmpty()) {
+            System.out.println("Next time don't forget to write an answer: A, B, C or D!");
+            return false;
+        }
         if(correctAnswer.equals(options.get(answer)))
             return true;
         return false;

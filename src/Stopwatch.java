@@ -13,8 +13,12 @@ public class Stopwatch {
         this.endTime = System.currentTimeMillis();
     }
 
-    void displayTimeSpentPlaying(){
+    long calculateTimeSpentPlaying(){
         long time = (endTime - startTime)/1000;
+        return time;
+    }
+
+    void displayTimeSpentPlaying(long time){
         long minutes = time/60;
         long seconds = time%60;
         if(time/60 < 1)

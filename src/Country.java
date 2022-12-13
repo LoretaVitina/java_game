@@ -18,10 +18,6 @@ public class Country {
         all.add(this);
     }
 
-    public String toString(){
-        return this.name + " has " + this.capital;
-    }
-
     static void readInFromFile(){
         try {
             Main.inputReader = new Scanner(csvFile, encoding);
@@ -35,6 +31,7 @@ public class Country {
                 Country country = new Country(name, capital);
             }
         } catch (Exception e) {
+            System.out.println("Couldn't read file: " + filePath);
             e.printStackTrace();
         }
     }
