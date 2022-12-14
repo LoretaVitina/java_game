@@ -32,7 +32,8 @@ public class Main {
         printPoints(player.points);
         System.out.print("You answered correctly to " + player.points + " questions in ");
         stopwatch.displayTimeSpentPlaying(stopwatch.calculateTimeSpentPlaying());
-        System.out.println("Top players and their correct answers: ");
+        System.out.println();
+        System.out.println("\nTop players and their correct answers: ");
         Result result = new Result(player.name, player.points, stopwatch.calculateTimeSpentPlaying());
         result.addToFile();
         Result.displayTop();
