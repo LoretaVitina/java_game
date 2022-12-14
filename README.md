@@ -35,12 +35,12 @@ atbild par atsevišķu funkciju veikšanu:
 3. Jautājuma (*Question*) klase atbild par atbilžu variantu izveidošanu un attēlošanu, kā arī pareizās atbildes noteikšanu un pārbaudi;
 4. Rezultāta (*Result*) klase atbild par katra rezultāta ielasīšanu csv failā, visu spēļu rezultātu atgūšanu no minētā faila, kā arī rezultātu topa atspoguļošanu;
 5. Rezultātu salīdzināšanas (*ResultComparator*) klase rezultāta klasē no csv faila ielasītos spēļu rezultātus sakārto dilstošā secībā, izmantojot burbuļa kārtošanas (*Bubble sort*) metodi. Ja divi spēlētāji ir ieguvuši vienādu punktu skaitu, tad augstāku vietu iegūst tas spēlētājs, kurš spēli ir pabeidzis īsākā laikā.
-6. Hronometra (*Stopwatch*) klase, kas uzņem spēles laiku sekundēs. Hronometra klase ir saistīta ar spēlētāja klasi.
+6. Hronometra (*Stopwatch*) klase uzņem spēles laiku sekundēs. Hronometra klase ir saistīta ar spēlētāja klasi, ļaujot katram spēlētājam uzstādīt viņa spēlē pavadīto laiku.
 ### Secinājumi par progresu kursā
-Uzsākot kursu "Programmēšanas pamati I" pašmācības ceļā biju gan pašmācības ceļā apguvusi visvienkāršākās tēmas, piemēram,
+Uzsākot kursu "Programmēšanas pamati I" pašmācības ceļā apguvusi visvienkāršākās tēmas, piemēram,
 vienkāršos datu tipus, cilpas un datu masīvus, gan arī mācījusies kursu "Programmatūras testēšana". Neskatoties uz to, kursa laikā ne tikai tika nostiprinātas jau iepriekš iegūtās zināšanas,
  bet arī iegūtas ļoti daudz jaunas zināšanas un prasmes. Lai arī mans progress kursā nav tik straujš,
 kā tas būtu apgūstot visu kursa vielu no *nulles*, tomēr tas ir ievērojams. Manuprāt, vislielākais ieguvums ir spēja mazāk paļauties
-uz *if-else* blokiem, izvairīties no *Makaroni* koda veidošanas un veidot izmantot gudrākus risinājumus.
+uz *if-else* blokiem, izvairīties no *Makaroni* koda veidošanas un veidot izmantot gudrākus, strukturētākus risinājumus.
 
 
